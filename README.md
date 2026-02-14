@@ -13,7 +13,7 @@ OCR-based tool for extracting author contact information from academic journal p
 - Audio feedback: Beep on success/failure
 
 <p align="center">
-  <img src="https://github.com/mac999/ext_emails_in_paper/blob/main/doc/example.png" width="400" />
+  <img src="https://github.com/mac999/ext_emails_in_paper/blob/main/doc/example.png" width="700" />
 </p>
 
 ## Requirements
@@ -152,5 +152,6 @@ MIT License
 - Works best with standard journal article formats (MDPI, Elsevier, etc.)
 - Manual verification recommended for critical data collection
 - Screen capture size is fixed to left half; adjust display accordingly
+
 
 
