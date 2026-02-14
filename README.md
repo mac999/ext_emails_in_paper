@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 **Step 3: Configure Tesseract path**
 
-Edit line 12 in `ocr_test.py` if Tesseract is installed elsewhere:
+Edit line 12 in `ext_email_in_paper.py` if Tesseract is installed elsewhere:
 ```python
 pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
 ```
@@ -54,7 +54,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tessera
 
 **Execution:**
 ```bash
-python ocr_test.py
+python ext_email_in_paper.py
 ```
 
 **Controls:**
@@ -138,14 +138,6 @@ Data appends to `journal_emails.csv` with columns:
 - pandas: Data manipulation and CSV operations
 - pyperclip: Clipboard access
 
-**File structure:**
-```
-ocr_test.py          # Main extraction script
-journal_emails.csv   # Output data (auto-created)
-requirements.txt     # Python dependencies
-README.md            # Documentation
-```
-
 ## License
 
 MIT License
@@ -156,3 +148,4 @@ MIT License
 - Works best with standard journal article formats (MDPI, Elsevier, etc.)
 - Manual verification recommended for critical data collection
 - Screen capture size is fixed to left half; adjust display accordingly
+
