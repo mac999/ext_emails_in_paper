@@ -2,6 +2,20 @@
 
 OCR-based tool for extracting author contact information from academic journal papers.
 
+## Background 
+
+The challenge is modern Anti-Bot Security like cloudflare.
+Initially, I attempted to extract author contact information using traditional web scraping methods (e.g., BeautifulSoup4, Selenium, Requests). However, major academic publishers like MDPI and Elsevier have implemented strict anti-bot measures, including Cloudflare protection and CAPTCHA challenges. This resulted in frequent blocking, 403 Forbidden errors, and complex maintenance issues.
+
+The Solution: A "What You See Is What You Get" Approach
+After several trial-and-error attempts, I found that the simplest and most robust solution was to bypass the DOM entirely.
+This tool utilizes an OCR (Optical Character Recognition) approach. Instead of parsing HTML, it captures the screen content visible to the human eye and extracts email patterns using Tesseract.
+
+- Pros: 100% immune to anti-bot detection (if you can see it, you can scrape it).
+- Cons: Requires manual navigation (Human-in-the-Loop), but significantly reduces engineering stress.
+
+While the current OCR method is effective for quick tasks, future iterations of this project will leverage Playwright combined with Large Language Models (LLMs) if I have time. An LLM-driven agent could intelligently navigate complex DOM structures and extract structured metadata (affiliations, research interests) more effectively than visual scraping alone.
+
 ## Features
 
 - Screen capture OCR: Captures left half of screen on F9 keypress
@@ -152,6 +166,7 @@ MIT License
 - Works best with standard journal article formats (MDPI, Elsevier, etc.)
 - Manual verification recommended for critical data collection
 - Screen capture size is fixed to left half; adjust display accordingly
+
 
 
 
